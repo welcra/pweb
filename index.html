@@ -74,7 +74,8 @@
         </h1>
         
         <p class="text-xl md:text-2xl text-slate-400 mb-12 leading-relaxed max-w-2xl mx-auto font-light">
-            A high school student based in New York City. <br>
+            A high school researcher and engineer based in NYC.<br>
+            I build scalable systems for scientific computing, financial modeling, and quantum hardware.
         </p>
 
         <div class="border-t border-b border-slate-800 py-8">
@@ -116,11 +117,13 @@
 
                 <div class="relative">
                     <div class="inline-block p-3 bg-slate-800 rounded-full shadow-sm mb-4 text-accent">
-                        <i class="fas fa-users text-xl"></i>
+                        <i class="fas fa-laptop-code text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-100">Leadership & Activities</h3>
+                    <h3 class="text-xl font-bold text-slate-100">Web Department Lead</h3>
+                    <p class="text-accent font-semibold text-sm mt-1 mb-4">The Stuyvesant Spectator</p>
+                    
                     <p class="mt-4 text-slate-400 leading-relaxed">
-                        <strong>Web Editor for the Spectator:</strong> One of the leaders of the web department of the Stuyvesant Spectator, an award-winning high school newspaper. We make changes and upload articles to the Spectator's website.<br><br>
+                        <strong>Technical Operations & Management:</strong> Directing the digital infrastructure for an award-winning high school publication. I lead the web department in maintaining site reliability, optimizing the editorial deployment pipeline, and ensuring 24/7 uptime for the student body and readership.
                     </p>
                 </div>
 
@@ -169,7 +172,13 @@
                  <div class="group">
                     
                     <h3 class="text-2xl font-bold text-white mb-2">Empirical Tests for a Hedging Framework for the Quantum Binomial Options Pricing Model</h3>
-                    <p class="text-xs font-bold text-accent uppercase tracking-wide mb-6">Independent Research • 2025</p>
+                    <div class="flex flex-wrap justify-center items-center gap-3 mb-6">
+                        <span class="text-xs font-bold text-accent uppercase tracking-wide">Independent Research</span>
+                        
+                        <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-[10px] font-bold uppercase tracking-widest">
+                            <i class="fas fa-file-alt mr-1.5 text-[10px]"></i> Preprint
+                        </span>
+                    </div>
                     
                     <p class="text-slate-400 leading-loose max-w-3xl mx-auto">
                         The Quantum Binomial Options Pricing Model is a novel approach to pricing derivatives. It serves as a quantum analogue to the classical binomial options pricing model, using concepts from quantum mechanics like the Pauli matrices and Bloch sphere to represent the derivatives market. Through usage of a density matrix and mixed states, the model can potentially price derivatives more accurately. However, at this time there exist no clear formulae and methods for hedging derivatives through this model. This paper numerically tests the performance of the hedging framework corresponding to the model as compared to the classical model using a year of historical S\&P 500 data. The simulation reveals that the Quantum Binomial Options Pricing model is, at least in its current state, not viable for usage in actually hedging derivatives. This is due to numerical instabilities, particularly in the Quantum Theta and Quantum Vega, the former of which ends up negative, betraying fundamental financial postulates, and the latter of which is blown out of scale. We hypothesize that these nonsensical values for Quantum Theta and Quantum Vega stem from the single period nature of the model we tested, as well as the isotropic assumption of the operator A. We conclude that the single period Quantum Binomial Options Pricing Model is currently unsuitable for practical applications of hedging and that our findings reveal the necessity of rigorously testing new financial models against benchmark models like the Classical Binomial Options Pricing Model.
@@ -191,6 +200,44 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+                <div class="bg-slate-800 p-2 rounded-xl shadow-lg shadow-black/20 hover:shadow-black/40 transition duration-300 border border-slate-700 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 bg-accent text-primary text-xs font-bold px-3 py-1 rounded-bl-lg z-10">
+                        OPEN SOURCE
+                    </div>
+
+                    <div class="h-56 bg-slate-700/50 rounded-lg flex items-center justify-center relative border-b border-slate-700">
+                        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#60a5fa 1px, transparent 1px); background-size: 20px 20px;"></div>
+                        
+                        <img src="images/yfinance-gh-logo-dark-ezgif.com-webp-to-png-converter.png" 
+                            alt="yfinance logo" 
+                            class="w-[70%] h-auto object-contain z-10 drop-shadow-[0_0_15px_rgba(96,165,250,0.3)]">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-white mb-2">Library Contributor</h3>
+                        <p class="text-xs font-bold text-accent uppercase tracking-wide mb-4">30M+ Monthly Downloads</p>
+                        
+                        <p class="text-slate-400 mb-6 leading-relaxed">
+                            Active contributor to <strong>yfinance</strong>, the industry-standard Python library for accessing Yahoo! Finance market data.
+                        </p>
+                        
+                        <div class="text-slate-400 mb-6 space-y-3 text-sm border-l-2 border-slate-700 pl-4">
+                            <p>
+                                <strong class="text-slate-200">The Problem:</strong> Identified critical gaps in the API where key metrics (PEG Ratio) were being dropped, causing failures for downstream quantitative scripts.
+                            </p>
+                            <p>
+                                <strong class="text-slate-200">The Fix:</strong> Engineered a fallback mechanism that parses the Key Statistics HTML page when the API fails, ensuring continuous data availability.
+                            </p>
+                        </div>
+
+                        <div class="flex flex-wrap justify-center gap-2 mb-6">
+                            <span class="px-3 py-1 bg-slate-700 text-xs font-bold text-slate-300 rounded-full border border-slate-600">Open Source</span>
+                            <span class="px-3 py-1 bg-slate-700 text-xs font-bold text-slate-300 rounded-full border border-slate-600">Python</span>
+                            <span class="px-3 py-1 bg-slate-700 text-xs font-bold text-slate-300 rounded-full border border-slate-600">Data Engineering</span>
+                        </div>
+                        <a href="https://github.com/ranaroussi/yfinance" class="text-accent font-semibold text-sm hover:underline">View Repository</a>
+                    </div>
+                </div>
                 
                 <div class="bg-slate-800 p-2 rounded-xl shadow-lg shadow-black/20 hover:shadow-black/40 transition duration-300 border border-slate-700">
                     <div class="h-56 overflow-hidden rounded-lg bg-slate-700 relative">
@@ -240,8 +287,13 @@
             <h2 class="text-2xl font-bold tracking-tight mb-2">Arnav Malhotra</h2>
             <p class="text-slate-500 text-sm mb-8">am@welcra.com</p>
             
+            <div class="mb-8">
+                <p class="text-slate-400 font-serif italic text-lg tracking-wide">
+                    "Aut viam inveniam aut faciam"
+                </p>
+            </div>
             <div class="w-full border-t border-slate-800 pt-8">
-                <p class="text-xs text-slate-600 uppercase tracking-widest">&copy; 2025 All Rights Reserved.</p>
+                <p class="text-xs text-slate-600 uppercase tracking-widest">© 2025 All Rights Reserved.</p>
             </div>
         </div>
     </footer>
