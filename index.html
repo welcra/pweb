@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>welcra</title>
+    <meta name="description" content="Building the infrastructure for the next generation of computing and finance. Arnav Malhotra is a researcher and engineer architecting fault-tolerant quantum hardware systems and generative financial intelligence.">
+    <meta name="author" content="Arnav Malhotra">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -180,35 +182,37 @@
                     <p class="text-slate-400 leading-loose max-w-3xl mx-auto">
                         The Quantum Binomial Options Pricing Model is a novel approach to pricing derivatives. It serves as a quantum analogue to the classical binomial options pricing model, using concepts from quantum mechanics like the Pauli matrices and Bloch sphere to represent the derivatives market. Through usage of a density matrix and mixed states, the model can potentially price derivatives more accurately. However, at this time there exist no clear formulae and methods for hedging derivatives through this model. This paper numerically tests the performance of the hedging framework corresponding to the model as compared to the classical model using a year of historical S&P 500 data. The simulation reveals that the Quantum Binomial Options Pricing model is, at least in its current state, not viable for usage in actually hedging derivatives. This is due to numerical instabilities, particularly in the Quantum Theta and Quantum Vega, the former of which ends up negative, betraying fundamental financial postulates, and the latter of which is blown out of scale. We hypothesize that these nonsensical values for Quantum Theta and Quantum Vega stem from the single period nature of the model we tested, as well as the isotropic assumption of the operator A. We conclude that the single period Quantum Binomial Options Pricing Model is currently unsuitable for practical applications of hedging and that our findings reveal the necessity of rigorously testing new financial models against benchmark models like the Classical Binomial Options Pricing Model.
                     </p>
-                    <div class="mt-6">
-                         <a href="https://doi.org/10.5281/zenodo.17851074" class="inline-block border-b border-slate-600 pb-1 hover:border-accent hover:text-accent transition text-slate-300">View Paper Draft</a>
+                    <div class="mt-8 flex flex-col md:flex-row items-center justify-center gap-6 border-t border-slate-800 pt-8 max-w-2xl mx-auto">
+                        <div class="flex items-center gap-6">
+                            <a href="https://doi.org/10.5281/zenodo.17851074" class="text-slate-300 hover:text-white text-sm font-semibold flex items-center gap-2 transition hover:underline decoration-accent underline-offset-4">
+                                <i class="fas fa-book-open"></i> Read Preprint
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="group">
                     <div class="w-full bg-white rounded-lg overflow-hidden mb-8 border border-slate-700 shadow-xl relative">
-                        <div class="absolute top-4 right-4 bg-slate-900/90 text-accent text-xs font-bold px-3 py-1 rounded border border-slate-700 backdrop-blur-md z-10">
-                            STATISTICAL VALIDATION
-                        </div>
                         
                         <img src="images/realfsynth_spy.png" 
                             alt="Heston vs GBM Kurtosis Comparison" 
                             class="w-full h-auto max-h-[500px] object-contain p-2 hover:scale-[1.01] transition duration-500">
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-white mb-2">Comparative Analysis of Stochastic Volatility Models vs. Real Market Kurtosis</h3>
+                    <h3 class="text-2xl font-bold text-white mb-2">Statistical Validation of Generative Financial Agents</h3>
                     
                     <div class="flex flex-wrap justify-center items-center gap-3 mb-6">
-                        <span class="text-xs font-bold text-accent uppercase tracking-wide">Algorithmic Research</span>
+                        <span class="text-xs font-bold text-accent uppercase tracking-wide">Independent Research</span>
                         <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-widest">
                             <i class="fas fa-box-open mr-1.5 text-[10px]"></i> Python Package
+                        </span>
+                        <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-[10px] font-bold uppercase tracking-widest">
+                            <i class="fas fa-file-alt mr-1.5 text-[10px]"></i> Preprint
                         </span>
                     </div>
                     
                     <p class="text-slate-400 leading-loose max-w-3xl mx-auto text-left">
-                        Standard financial modeling often relies on Geometric Brownian Motion (GBM), which assumes normally distributed returns (Kurtosis ≈ 0). This assumption fails to account for "Black Swan" events, leading to catastrophic underestimation of risk. 
-                        <br><br>
-                        This study shows a benchmark of the <strong>fsynth</strong> engine (utilizing Heston Volatility + Merton Jump Diffusion) against 5 years of S&P 500 data. The results demonstrate that while GBM fails to capture market extremes, the <code>fsynth</code> engine successfully replicates the high-kurtosis "fat tails" of real markets (Real: 8.04 vs. Simulated: 5.81), providing a statistically rigorous foundation for training machine learning agents.
+                        Traditional machine learning models trained on financial market data are known to be highly susceptible to overfitting the past market. Historical data is limited, and models trained only on data from the past will only be able to perform well in financial conditions mimicking the past. To combat this data scarcity, many use mathematical generators of unlimited synthetic data. However, traditional synthetic data generators often rely on Geometric Brownian Motion (GBM), which fails to account for empirical phenomena such as volatility clustering, leverage effects, and ”black swan” jump events. This paper introduces fsynth, a multi-factor synthetic engine that integrates a Heston-based stochastic volatility model with Merton jump diffusion, governed by a hidden Markov regime-switching process. By using macro-regime states alongside company specific ”genes,” the engine generates plausible universes containing both price action and fundamental accounting data. We demonstrate that while the engine can be calibrated to replicate conditions of historical benchmarks, its primary utility lies in its parameterizable nature, allowing for the simulation of arbitrary, ”out-of-sample” stress scenarios.
                     </p>
 
                     <div class="mt-8 flex flex-col md:flex-row items-center justify-center gap-6 border-t border-slate-800 pt-8 max-w-2xl mx-auto">
@@ -219,12 +223,12 @@
                         </div>
 
                         <div class="flex items-center gap-6">
-                            <a href="https://github.com/welcra/fsynth" class="text-slate-300 hover:text-white text-sm font-semibold flex items-center gap-2 transition hover:underline decoration-accent underline-offset-4">
-                                <i class="fab fa-github"></i> Repository
+                            <a href="https://doi.org/10.2139/ssrn.5968794" class="text-slate-300 hover:text-white text-sm font-semibold flex items-center gap-2 transition hover:underline decoration-accent underline-offset-4">
+                                <i class="fas fa-book-open"></i> Read Preprint
                             </a>
                             <span class="text-slate-700">|</span>
-                            <a href="https://pypi.org/project/fsynth/" class="text-slate-300 hover:text-white text-sm font-semibold flex items-center gap-2 transition hover:underline decoration-accent underline-offset-4">
-                                <i class="fas fa-box"></i> PyPI Package
+                            <a href="https://github.com/welcra/fsynth" class="text-slate-300 hover:text-white text-sm font-semibold flex items-center gap-2 transition hover:underline decoration-accent underline-offset-4">
+                                <i class="fab fa-github"></i> Source Code
                             </a>
                         </div>
                     </div>
