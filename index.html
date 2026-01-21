@@ -14,17 +14,7 @@
     <meta property="og:image" content="https://welcra.com/images/3d-render-space-warp-tunnel-effect.jpg">
     <meta property="og:url" content="https://welcra.com">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-
-    <link rel="icon" type="image/png" sizes="96x96" href="/GOOG_favicon.png">
-
-    <link rel="manifest" href="/site.webmanifest">
-    
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="welcra_darkmode.svg">
     
     <script>
         tailwind.config = {
@@ -34,8 +24,10 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        primary: '#020617',
-                        accent: '#60a5fa',
+                        // Updated to match the "Void Ink" color from the Python script
+                        primary: '#020617', 
+                        // Updated to Indigo-400 (#818cf8) to match the "Electric Indigo" gradient
+                        accent: '#818cf8', 
                     }
                 }
             }
@@ -47,9 +39,13 @@
     <nav class="fixed w-full z-50 bg-slate-950/90 backdrop-blur-sm border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-4 py-4">
             <div class="flex flex-col items-center justify-center space-y-4">
-                <div>
-                    <a href="#" class="text-xl font-bold text-slate-100 tracking-widest uppercase border-b-2 border-slate-100 pb-1">Arnav Malhotra</a>
-                </div>
+                <a href="#" class="flex items-center gap-3 group">
+                    <img src="welcra_darkmode.svg" alt="Welcra Logo" class="h-10 w-10 group-hover:scale-110 transition-transform duration-300">
+                    
+                    <span class="text-xl font-bold text-slate-100 tracking-widest uppercase border-b-2 border-transparent group-hover:border-accent transition-colors">
+                        Arnav Malhotra
+                    </span>
+                </a>
                 
                 <div class="hidden md:flex space-x-12">
                     <a href="#about" class="text-xs font-bold text-slate-400 hover:text-accent uppercase tracking-widest transition">About</a>
@@ -84,7 +80,7 @@
         </p>
 
         <div class="mb-12">
-            <a href="ArnavMalhotra_Resume.pdf" target="_blank" class="group inline-flex items-center gap-3 px-8 py-3 bg-accent text-slate-950 hover:bg-blue-400 font-bold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(96,165,250,0.4)]">
+            <a href="ArnavMalhotra_Resume.pdf" target="_blank" class="group inline-flex items-center gap-3 px-8 py-3 bg-accent text-slate-950 hover:bg-indigo-400 font-bold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(129,140,248,0.4)]">
                 <i class="fas fa-file-arrow-down text-lg group-hover:translate-y-0.5 transition-transform"></i>
                 <span>Download Resume</span>
             </a>
@@ -239,9 +235,10 @@
                     
                     <div class="flex flex-wrap justify-center items-center gap-3 mb-6">
                         <span class="text-xs font-bold text-accent uppercase tracking-wide">Independent Research</span>
-                        <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-widest">
+                        <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-[10px] font-bold uppercase tracking-widest">
                             <i class="fas fa-box-open mr-1.5 text-[10px]"></i> Python Package
                         </span>
+                        
                         <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-[10px] font-bold uppercase tracking-widest">
                             <i class="fas fa-file-alt mr-1.5 text-[10px]"></i> Preprint
                         </span>
@@ -296,11 +293,11 @@
                     </div>
 
                     <div class="h-56 bg-slate-700/50 rounded-lg flex items-center justify-center relative border-b border-slate-700">
-                        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#60a5fa 1px, transparent 1px); background-size: 20px 20px;"></div>
+                        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#818cf8 1px, transparent 1px); background-size: 20px 20px;"></div>
                         
                         <img src="images/yfinance-gh-logo-dark-ezgif.com-webp-to-png-converter.png" 
                             alt="yfinance logo" 
-                            class="w-[70%] h-auto object-contain z-10 drop-shadow-[0_0_15px_rgba(96,165,250,0.3)]">
+                            class="w-[70%] h-auto object-contain z-10 drop-shadow-[0_0_15px_rgba(129,140,248,0.3)]">
                     </div>
                     <div class="p-8">
                         <h3 class="text-xl font-bold text-white mb-2">Library Contributor</h3>
